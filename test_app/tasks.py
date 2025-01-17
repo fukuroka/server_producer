@@ -1,0 +1,1 @@
+from celery import shared_task@shared_taskdef sum_numbers(number_1, number_2):    # результат возвращается в автоматически созданную очередь на изначальную ручку отправителя    # после очередь ответа удаляется см. файл custom_backend    return int(number_1) + int(number_2)
