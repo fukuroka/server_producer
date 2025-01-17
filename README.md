@@ -6,11 +6,15 @@ sudo apt-get install -y erlang-base \
                         erlang-runtime-tools erlang-snmp erlang-ssl \
                         erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
 
+
 sudo apt-get install rabbitmq-server -y --fix-missing
 
-После установки создайте администратора и дайте ему все разрешения 
+После установки создайте администратора и дайте ему все разрешения
+
 rabbitmqctl add_user admin admin
+
 rabbitmqctl set_user_tags admin administrator
+
 rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
 
 
